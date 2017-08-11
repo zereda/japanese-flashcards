@@ -18,7 +18,7 @@ button.addEventListener( "click", () => {
 			i = (i + 1) % kanjicards.length;
 			showkanjicard();
 			
-		}, 1000);
+		}, 3000);
 		btn1.textContent = "Pause";
 	}
 	else{
