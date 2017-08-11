@@ -4,6 +4,7 @@ var worddiv = document.getElementById("word");
 var meaningdiv= document.getElementById("meaning");
 var button= document.getElementById ("btn1");
 var backbutton = document.getElementById ("btn2");
+var nextbutton = document.getElementById ("btn3");
 
 var i = 0;
 var IdInterval = null;
@@ -48,3 +49,9 @@ function showkanjicard(){
 	worddiv.textContent = kanjicards[i].word;
 	meaningdiv.textContent = kanjicards[i].meaning;
 }
+
+nextbutton.addEventListener("click",() => {
+	i = (i + 1) % kanjicards.length;
+	showkanjicard();
+	
+});
